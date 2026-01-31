@@ -22,34 +22,18 @@ The converter automatically:
 - TIFF
 - WEBP
 
-## Requirements
-
-- Python 3.6 or higher
-- Pillow library
-
-Install Pillow with:
-```
-pip install Pillow
-```
-
 ## How to Use
 
-1. Run the converter:
-   ```
-   python converter.py
-   ```
-
-2. Place your images in the `input` folder (created automatically next to the script)
-
+1. Place your images in the `input` folder (next to the program)
+2. Run the converter (double-click the .exe or run the script)
 3. Click the **Convert** button
-
 4. Find your converted images in the `output` folder
 
 ## Folder Structure
 
 ```
 XTEInk-Wallpaper/
-    converter.py
+    XTEInk Wallpaper Converter.exe   (or converter.py)
     README.md
     input/         <- Put your images here
     output/        <- Converted images appear here
@@ -57,6 +41,38 @@ XTEInk-Wallpaper/
 
 ## Notes
 
-- If a file with the same name already exists in the output folder, the new file will be renamed with a suffix (e.g., `photo_1.bmp`)
-- The input and output folders are created automatically when you run the program
+- The `input` and `output` folders are created automatically
+- If a file already exists in output, the new file gets a suffix (e.g., `photo_1.bmp`)
 - Progress is shown while converting multiple images
+
+---
+
+## Building the Executable
+
+To build a standalone .exe that anyone can run without installing Python:
+
+1. Install the build dependencies:
+   ```
+   pip install pyinstaller pillow
+   ```
+
+2. Run the build script:
+   ```
+   python build.py
+   ```
+
+3. Find the .exe in the `dist` folder
+
+## Running from Source
+
+If you prefer to run the Python script directly:
+
+1. Install Pillow:
+   ```
+   pip install Pillow
+   ```
+
+2. Run:
+   ```
+   python converter.py
+   ```
